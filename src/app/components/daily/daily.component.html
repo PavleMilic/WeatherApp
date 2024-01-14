@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <div class="container" *ngIf="!sipnnerVisible">
+    <div class="day">
+      Day
+      <div class="date">{{date}}</div>
+    </div>
+    <div class="weather-description">{{data.weather[0].description}}</div>
+    <div class="image">
+      <!-- <img src="assets/images/image-1.png" alt="" /> -->
+    </div>
+    <div class="temperature">
+      <span class="higher">{{data.main.temp_max}}&deg;C</span><span class="lower">/ {{data.main.temp_min}}&deg;C</span>
+
+      <div class="feels-like">Feels like: {{data.main.feels_like}}</div>
+    </div>
+    <div class="saturation">{{data.main.humidity}}%</div>
+  </div>
+</div>

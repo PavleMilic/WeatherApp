@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <div class="logo">
+    <div class="containerLogo">
+      <img src="https://logodix.com/logo/1918121.png" alt="" />
+      <div class="text">
+        <div>{{currentCity}}</div>
+        <div>{{temp}} ℃ </div>
+      </div>
+      <div class="search">
+        <!-- <i class="fas fa-search"></i> -->
+        <input type="search" disabled="true" placeholder="search..." [(ngModel)]="inputCity" />
+        <button type="submit" (click)="cityWeather(inputCity)"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="headers">
+    <div class="header" (click)="navigateToToday()">TODAY</div>
+    <div class="header" (click)="navigateToHourly()">HOURLY</div>
+    <div class="header" (click)="navigateToDaily()">DAILY</div>
+    <div class="header" (click)="navigateToRadar()">RADAR</div>
+    <div class="header" (click)="navigateToMinuteCast()">MINUTECAST</div>
+    <div class="header" (click)="navigateToMonthly()">MONTHLY</div>
+    <div class="header" (click)="navigateToAirQuality()">AIR QUALITY</div>
+    <div class="header" (click)="navigateToHealthActivites()">
+      HEALT & ACTIVITES
+    </div> -->
+  <!-- </div> -->
+</div>

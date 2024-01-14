@@ -1,0 +1,81 @@
+.days {
+
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 600px;
+    height: 130px;
+    background-color: rgb(255, 249, 249);
+    border-left: 2px solid rgb(244, 79, 79);
+    padding: 15px;
+    margin: 30px;
+    box-sizing: border-box;
+    box-shadow: 5px 10px 8px #888888;
+    transition: height 1s;
+
+    &.open {
+
+      height: 350px;
+      transition: height 0.5s;
+    }
+
+    .time-temp {
+      margin: 20px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 40px;
+      color: rgb(73, 71, 71);
+
+      .time {
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image {
+        width: 55px;
+        height: 55px;
+        object-fit: cover;
+      }
+
+      .temp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      .viewMore {
+        cursor: pointer;
+
+      }
+
+    }
+
+    .text {
+      opacity: 0;
+      display: flex;
+      justify-content: space-between;
+      margin: 18px 5px 18px 10px;
+
+
+      .text-info {
+        width: 45%;
+
+
+        li {
+          margin: 18px 10px;
+          list-style-type: none;
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid rgb(151, 148, 148);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<div class="wrapper">
+    <div class="days" *ngFor="let day of weatherDays, let i=index;">
+        <div class="date">{{day[i].date}}
+            <div class="timeslot" *ngFor="let time of day">
+                <div class="card" [class.open]="time.isOpen">
+                    <!-- <div class="card" [@fadeInOut]="animationState"> -->
+                    <!-- <div class="card" [ngStyle]="{ 'height': isExpanded ? '350px' : '130px' }"> -->
+                    <!-- <div class="card" [style.height.px]="elementHegiht" [@fadeInOut]="elementHegiht"> -->
+                    <div class="time-temp">
+                        <span class="time">{{time.tranformedTime}}</span>
+                        <span *ngIf="time.sunny"><img class="image" src="assets/images/sunny weather icon.png"
+                                alt=""></span>
+                        <span *ngIf="time.rainy"><img class="image" src="assets/images/rainy weather icon.png"
+                                alt=""></span>
+                        <span *ngIf="time.cloudy"><img class="image" src="assets/images/cloudy weather icon.png"
+                                alt=""></span>
+                        <span class="temp">{{time.temp}} ℃</span>
+                        <div class="viewMore" (click)="toggleInfo(time)">&#8594;</div>
+                    </div>
+                    <div class="text" *ngIf="time.isOpen" [@InfoVisability]="animationState">
+                        <div class="text-info">
+                            <span>
+                                <li>RealFeel<span>{{time.main.feels_like}} ℃</span></li>
+                                <li>Pressure<span>{{time.main.pressure}}mmb</span></li>
+                                <li>Humidity<span>{{time.main.humidity}} %</span></li>
+                                <li>WindSpeed<span>{{time.wind.speed}}km/h</span></li>
+                            </span>
+                        </div>
+                        <div class="text-info">
+                            <span>
+                                <li>Cloud Cover<span>{{time.clouds.all}}%</span></li>
+                                <li>Description<span>{{time.weather[0].description}}</span></li>
+                                <li>WeatherMood<span>{{time.weather[0].main}}</span></li>
+                                <li>WindGust<span>{{time.wind.gust}}km/h</span></li>
+                            </span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

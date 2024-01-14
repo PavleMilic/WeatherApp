@@ -1,0 +1,56 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+
+  .container {
+    width: 850px;
+    height: 150px;
+    margin-top: 30px;
+    border-left: 2px solid red;
+    background-color: rgb(251, 251, 251);
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    min-width: 850px;
+   
+
+    .day {
+      font-size: 25px;
+
+      .date {
+        margin-top: 3px;
+        font-size: 18px;
+        color: gray;
+      }
+    }
+    .weather-description{
+      color:gray;
+    }
+    .temperature{
+      
+      
+      .higher {
+        font-size: 25px;
+        vertical-align: super;
+      }
+      .lower {
+        font-size: 16px;
+        color: rgb(49, 48, 48);
+        vertical-align: sub;
+      }
+      .feels-like{
+        margin-top: 10px;
+        color: gray;
+      }
+    }
+    .saturation {
+      font-size: 20px;
+      color: gray;
+    }
+  }
+}
+
